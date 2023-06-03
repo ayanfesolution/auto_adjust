@@ -11,25 +11,22 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Mobile development is unique, since we are designing for thousands of screen sizes. We have a figma design that takes only one size into consideration. In order to still maintain the look of your figma design no matter the type of phone or the screen size, we develop this package to automatically adjust based on the MediaQuary of the phone. You just design as given in the figma, while the plugin does the adjustment work
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+1. For automatic adjustment of the sizes of container and sizeboxes
+2. For automatic adjustment of any white spaces, images, icons, any object that have to deal with sizes.
+3. For automatic adjustment of text. We advise to make use of the height adjustment for text.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+The only prerequisites for using this package is to declear the SizeConfig init function inside the build function before return of the first widget of the mobile app.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+    SizeConfig().init(context, a);
 ```
 
 ## Additional information

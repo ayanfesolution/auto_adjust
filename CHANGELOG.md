@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Simple method and easy integration of the package. Just a simple one line call.

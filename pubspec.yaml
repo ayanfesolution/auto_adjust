@@ -1,7 +1,7 @@
 name: auto_adjust
-description: A flutter plackage that automatically adjust your sizes using the media quary to fit any screen size.
+description: A flutter package that automatically adjust your sizes using the media quary to fit any screen size.
 version: 0.0.1
-homepage:
+homepage: https://github.com/ayanfesolution/auto_adjust.git
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

@@ -18,19 +18,45 @@ Mobile development is unique, since we are designing for thousands of screen siz
 1. For automatic adjustment of the sizes of container and sizeboxes
 2. For automatic adjustment of any white spaces, images, icons, any object that have to deal with sizes.
 3. For automatic adjustment of text. We advise to make use of the height adjustment for text.
+4. For padding automatic adjustment.
 
 ## Getting started
 
-The only prerequisites for using this package is to declear the SizeConfig init function inside the build function before return of the first widget of the mobile app.
+The only prerequisites for using this package is to declare the SizeConfig init function inside the build function before return of the first widget of the mobile app.
 
 ## Usage
-
+To initialized the package usability
 ```dart
-    SizeConfig().init(context, a);
+    SizeConfig().init(context, 845, 375);
+```
+A simple example of how to keep using the package
+```dart
+    SizedBox(
+          height: autoAdjustHeight(150),
+          width: autoAdjustWidth(250),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: autoAdjustWidth(10),
+                    vertical: autoAdjustHeight(5)),
+                child: Text(
+                  'You have pushed the button this many times:',
+                  style: TextStyle(
+                    fontSize: autoAdjustHeight(10),
+                  ),
+                ),
+              ),
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ],
+          ),
+        ),
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This package is developed by Ayanfe Afolabi Oluwagbenga, as a contribution to the dart community. To know more about the package or contribute to it, reach out to me at ayanfesolutions@gmail.com. If you also have an idea on what you feel we can do together, also reach out to me. Together let us make flutter community grow stronger.

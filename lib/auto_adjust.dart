@@ -27,7 +27,7 @@ class SizeConfig {
 }
 
   // Get the proportionate height as per screen size
-double autoAdjustHeight({required double inputHeight}) {
+double autoAdjustHeight(double inputHeight) {
     final screenHeight = SizeConfig.screenHeight;
     return (inputHeight / SizeConfig.figmaDesignHeight!) * screenHeight!;
     
